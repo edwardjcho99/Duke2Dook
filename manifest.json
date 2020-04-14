@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Duke2Dook",
+  "version": "1.0",
+  "description": "Turns every mention of Duke on any website into 'Dook'",
+  "icons": { "16": "images/breadsticks16.png",
+           "48": "images/breadsticks48.png",
+          "128": "images/breadsticks128.png" },
+  "content_scripts": [
+    {
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "run_at":"document_end"
+  }
+]
+
+}
