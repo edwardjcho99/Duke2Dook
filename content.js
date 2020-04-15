@@ -15,28 +15,41 @@ function findAndReplace(){
 }
 
 var replacementWords = [
-  ["duke university","Dook Community College"],
-  ["Duke Blue Devils men's","Dook Blue Devils boy's"],
-  ["Duke Blue Devils women's","Dook Blue Devils Girl's"],
-  ["Duke Men's", "Dook boy's"],
+  ["Duke University","Dook Community College"],
+  ["Duke university","Dook community college"],
+  ["duke university","Dook community college"],
+  ["Duke Blue Devils Men's","Dook Blue Devils Boy's"],
+  ["Duke blue devils men's","Dook blue bevils boy's"],
+  ["Duke Blue Devils women's","Dook Blue Devils girl's"],
+  ["Duke Blue Devils Women's","Dook Blue Devils Girl's"],
+  ["Duke Men's", "Dook Boy's"],
+  ["Duke men's", "Dook boy's"],
+  ["Duke Mens", "Dook Boys"],
+  ["Duke mens", "Dook boys"],
   ["Duke Women's", "Dook Girl's"],
+  ["Duke women's", "Dook girl's"],
+  ["Duke Womens", "Dook Girls"],
+  ["Duke womens", "Dook girls"],
   ["Duke MBB", "Dook BBB"],
   ["DukeMBB", "DookBBB"],
   ["Duke WBB", "Dook GBB"],
   ["DukeWBB", "DookGBB"],
+  ["Mike Krzyzewski",'Mike "Duke is an elitist institution" Krzyzewski'],
+  ["mike krzyzewski",'mike "Duke is an elitist institution" krzyzewski'],
+  ["Coach K ",'Coach "Duke is an elitist institution" K '],
+  ["Coach K,",'Coach "Duke is an elitist institution" K,'],
+  ["Coach K.",'Coach "Duke is an elitist institution" K.'],
+  ['Coach K",','Coach "Duke is an elitist institution" K"'],
+  ["coach k ",'coach "Duke is an elitist institution" k '],
+  ["Duke","Dook"],
+  ["duke","dook"]
 ]
 
 function replaceText(node){
   let value = node.nodeValue;
-  console.log(value);
-
   for (var pair in replacementWords){
-    value = value.replace(new RegExp(replacementWords[pair][0], "gi"), replacementWords[pair][1]);
-    console.log(value);
+    value = value.replace(replacementWords[pair][0], replacementWords[pair][1]);
   }
-
-  value = value.replace(new RegExp("Duke","gi"), "Dook");
-  console.log(value);
 
   node.nodeValue = value;
 }
