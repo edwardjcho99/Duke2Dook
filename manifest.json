@@ -4,12 +4,14 @@
   "name": "Duke2Dook",
   "version": "1.0",
   "description": "Turns every mention of Duke on any website into 'Dook'",
+  "permissions": [
+    "activeTab"
+  ],
   "icons": {
     "128": "images/dukelogo.png"
   },
   "content_scripts": [
     {
-    "matches": ["activeTab"],
     "js": ["content.js"],
     "run_at":"document_end"
   }
