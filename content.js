@@ -19,7 +19,7 @@ var replacementWords = [
   ["Duke university","Dook community college"],
   ["duke university","Dook community college"],
   ["Duke Blue Devils Men's","Dook Blue Devils Boy's"],
-  ["Duke blue devils men's","Dook blue bevils boy's"],
+  ["Duke Blue Devils men's","Dook Blue Devils boy's"],
   ["Duke Blue Devils women's","Dook Blue Devils girl's"],
   ["Duke Blue Devils Women's","Dook Blue Devils Girl's"],
   ["Duke Men's", "Dook Boy's"],
@@ -43,7 +43,7 @@ var replacementWords = [
   ["coach k ",'coach "Duke is an elitist institution" k '],
   ["Duke","Dook"],
   ["duke","dook"]
-]
+];
 
 function replaceText(node){
   let value = node.nodeValue;
